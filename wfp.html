@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Taqwa High School — The Way Forward: Our Strategic Plan for the Next SS3 Set</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,600&family=Lora:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy-950:#081527;
+  --navy-900:#0b1e36;
+  --navy-800:#12304f;
+  --gold-600:#a9821c;
+  --gold-500:#c9a227;
+  --gold-400:#dab949;
+  --gold-300:#e8c766;
+  --parchment:#f6f1e3;
+  --parchment-dim:#eee6d1;
+  --ink:#1b2431;
+  --ink-soft:#4a5568;
+  --green:#2f6f52;
+  --green-dim:#e4f0e9;
+  --slate:#3d5a80;
+  --slate-dim:#e3eaf3;
+  --red:#a23b2e;
+  --card:#ffffff;
+}
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{margin:0;background:var(--parchment);color:var(--ink);font-family:'Lora',serif;line-height:1.58;}
+.display{font-family:'Playfair Display',serif;}
+.mono{font-family:'IBM Plex Mono',monospace;}
+
+.divider{display:flex; align-items:center; gap:14px; margin:0 0 34px 0;}
+.divider .line{flex:1; height:1px; background:linear-gradient(90deg, transparent, var(--gold-500), transparent);}
+.divider svg{flex-shrink:0;}
+
+header.hero{
+  position:relative; background:radial-gradient(ellipse at 20% -10%, #163a5f 0%, var(--navy-900) 55%, var(--navy-950) 100%);
+  color:var(--parchment); padding:64px 8vw 54px; overflow:hidden; isolation:isolate;
+}
+header.hero::before{
+  content:""; position:absolute; inset:0;
+  background-image:repeating-linear-gradient(45deg, rgba(201,162,39,0.055) 0 2px, transparent 2px 46px),
+    repeating-linear-gradient(-45deg, rgba(201,162,39,0.055) 0 2px, transparent 2px 46px);
+  z-index:-1;
+}
+header.hero::after{
+  content:""; position:absolute; right:-140px; top:-140px; width:420px; height:420px; border-radius:50%;
+  background:radial-gradient(circle, rgba(201,162,39,0.16), transparent 70%); z-index:-1;
+}
+.eyebrow{font-family:'IBM Plex Mono',monospace; letter-spacing:.22em; text-transform:uppercase; font-size:12px; color:var(--gold-300); display:flex; align-items:center; gap:10px;}
+.eyebrow::before{content:"◆"; color:var(--gold-500); font-size:10px;}
+h1.title{font-size:clamp(30px,4.6vw,52px); margin:14px 0 6px; font-weight:800; letter-spacing:-.01em; max-width:24ch;}
+h1.title .accent{color:var(--gold-400); font-style:italic; font-weight:600;}
+.subtitle{font-size:17px; color:#c9d3e0; max-width:66ch; margin:0 0 30px;}
+.hero-meta{display:flex; flex-wrap:wrap; gap:28px 46px; margin-top:36px; padding-top:26px; border-top:1px solid rgba(232,199,102,0.25);}
+.hero-meta .item .k{font-family:'IBM Plex Mono',monospace; font-size:10.5px; letter-spacing:.14em; text-transform:uppercase; color:#8fa3bc;}
+.hero-meta .item .v{font-family:'Playfair Display',serif; font-size:19px; font-weight:600; color:var(--parchment); margin-top:3px;}
+
+.quicknav{position:sticky; top:0; z-index:20; background:rgba(11,30,54,0.97); backdrop-filter:blur(6px); border-bottom:1px solid rgba(232,199,102,0.3); overflow-x:auto; white-space:nowrap;}
+.quicknav .inner{display:flex; gap:4px; padding:10px 8vw; max-width:1180px; margin:0 auto;}
+.quicknav a{flex-shrink:0; font-family:'IBM Plex Mono',monospace; font-size:11.5px; letter-spacing:.04em; color:#b9c6d8; text-decoration:none; padding:7px 13px; border-radius:20px; transition:background .15s, color .15s;}
+.quicknav a:hover{background:rgba(201,162,39,0.18); color:var(--gold-300);}
+
+main{max-width:980px; margin:0 auto; padding:0 8vw;}
+section{padding:50px 0; scroll-margin-top:60px;}
+h2.section-title{font-size:clamp(22px,2.8vw,28px); font-weight:700; margin:0 0 6px; color:var(--navy-900);}
+p.section-sub{color:var(--ink-soft); margin:0 0 26px; max-width:70ch; font-size:15.5px;}
+.tag{display:inline-block; font-family:'IBM Plex Mono',monospace; font-size:10.5px; letter-spacing:.16em; text-transform:uppercase; color:var(--gold-600); background:rgba(201,162,39,0.12); padding:4px 10px; border-radius:3px; margin-bottom:12px;}
+
+.affirm-box{background:#fbf6e8; border:1.5px solid var(--gold-600); border-radius:12px; padding:24px 26px; margin-bottom:8px;}
+.affirm-box p{font-size:14.5px; color:var(--ink); margin:0;}
+
+.plan-card{background:var(--card); border:1px solid #e6ddc4; border-radius:10px; padding:22px 24px; margin-bottom:16px; border-top:3px solid var(--green);}
+.plan-card .plan-tag{display:inline-block; font-family:'IBM Plex Mono',monospace; font-size:10px; letter-spacing:.1em; text-transform:uppercase; background:var(--green-dim); color:var(--green); padding:3px 10px; border-radius:20px; margin-bottom:10px;}
+.plan-card h4{margin:0 0 8px; font-family:'Playfair Display',serif; font-size:17px; color:var(--navy-900);}
+.plan-card p{font-size:14.2px; margin:0 0 8px; color:var(--ink-soft);}
+.plan-card p:last-child{margin-bottom:0;}
+.plan-card ul{margin:0; padding-left:20px;}
+.plan-card ul li{margin-bottom:8px;}
+.plan-card ul li p{margin:0;}
+.plan-card ul li:last-child p{margin:0;}
+
+.timeline{background:var(--navy-900); color:var(--parchment); border-radius:14px; padding:30px 8vw; margin:0 -8vw 0; position:relative; overflow:hidden;}
+.timeline::before{content:""; position:absolute; right:-100px; top:-100px; width:300px; height:300px; border-radius:50%; background:radial-gradient(circle, rgba(201,162,39,0.16), transparent 70%);}
+.timeline-inner{max-width:980px; margin:0 auto; position:relative; z-index:1;}
+.timeline h3{font-family:'Playfair Display',serif; font-size:19px; color:var(--gold-300); margin:0 0 18px;}
+.tl-grid{display:grid; grid-template-columns:repeat(4,1fr); gap:14px;}
+@media(max-width:760px){.tl-grid{grid-template-columns:1fr 1fr;}}
+.tl-item{background:rgba(255,255,255,0.06); border:1px solid rgba(232,199,102,0.25); border-radius:10px; padding:16px 14px;}
+.tl-item .n{font-family:'IBM Plex Mono',monospace; font-size:10px; letter-spacing:.1em; text-transform:uppercase; color:var(--gold-300); margin-bottom:6px;}
+.tl-item p{margin:0; font-size:13px; color:#dbe3ee;}
+
+.sign-block{margin-top:14px; padding-top:18px; border-top:1px dashed #e6ddc4;}
+.sign-block .role{font-family:'Playfair Display',serif; font-size:16px; color:var(--navy-900); font-weight:600;}
+.sign-block .school{font-size:13px; color:var(--ink-soft); margin-top:2px;}
+
+footer{background:var(--navy-950); color:#8fa3bc; padding:40px 8vw; margin-top:50px; font-size:12.5px;}
+footer .wrap{max-width:980px; margin:0 auto; display:flex; justify-content:space-between; flex-wrap:wrap; gap:16px; align-items:center;}
+footer .brand{color:var(--gold-300); font-family:'Playfair Display',serif; font-size:15px;}
+
+.reveal{opacity:0; transform:translateY(16px); transition:opacity .6s ease, transform .6s ease;}
+.reveal.in{opacity:1; transform:none;}
+
+@media(max-width:640px){
+  .timeline{padding:26px 6vw; margin:0 -6vw;}
+}
+</style>
+</head>
+<body>
+
+<header class="hero">
+	<a class="backlink" style="color: white;" href="index.html">&larr; <font color="white">Back to Results Analysis</a>
+	<p>
+  <div class="eyebrow">Taqwa High School &nbsp;·&nbsp; Off Iju Road, Agege, Lagos &nbsp;·&nbsp; From the Office of the Principal</div></p>
+  <h1 class="title">The Way <span class="accent">Forward</span></h1>
+  <p class="subtitle">Our strategic plan for the next SS3 set, submitted for the Board's record — a structured, year-round programme covering classroom practice, exam-readiness training, differentiated support, and stakeholder engagement, developed directly from the findings of the 2026 WASSCE Comprehensive Result &amp; Pass-Rate Report.</p>
+  <div class="hero-meta">
+    <div class="item"><div class="k">Scope</div><div class="v">Next SS3 Set</div></div>
+    <div class="item"><div class="k">Strategic Groups</div><div class="v">4</div></div>
+    <div class="item"><div class="k">Directives</div><div class="v">12</div></div>
+    <div class="item"><div class="k">Reference</div><div class="v">Section 12, WASSCE 2026 Report</div></div>
+  </div>
+</header>
+
+<nav class="quicknav">
+  <div class="inner">
+    <a href="#intro">Introduction</a>
+    <a href="#groupA">Classroom &amp; Assessment</a>
+    <a href="#groupB">Exam-Readiness</a>
+    <a href="#groupC">Differentiated Support</a>
+    <a href="#groupD">Stakeholders &amp; Conduct</a>
+    <a href="#timeline">At a Glance</a>
+  </div>
+</nav>
+
+<main>
+
+<section id="intro" class="reveal">
+  <span class="tag">Introduction</span>
+  <h2 class="section-title">Why we are setting this out</h2>
+  <div class="affirm-box">
+    <p>This is not a set of proposals for consideration — it is the strategic plan we have already put in place, effective from resumption, for the next SS3 set. A number of the measures below are not new; they build directly on practice already running at Taqwa. What changes from this point is the rigor, consistency, and oversight with which we are now enforcing them. We set the full plan out below, organised into four groups: how subjects are taught and tested, how students are trained to sit WAEC specifically, how support is matched to individual need, and how parents, the PTA, and student conduct are brought fully into the process.</p>
+  </div>
+</section>
+
+<div class="divider"><div class="line"></div><svg width="20" height="20" viewBox="0 0 20 20"><path d="M10 0 L12.5 7.5 L20 10 L12.5 12.5 L10 20 L7.5 12.5 L0 10 L7.5 7.5 Z" fill="#c9a227"/></svg><div class="line"></div></div>
+
+<section id="groupA" class="reveal">
+  <span class="tag">Group A</span>
+  <h2 class="section-title">Classroom &amp; Assessment Reform</h2>
+  <p class="section-sub">We are rebuilding how the classroom itself prepares students for WAEC — sharper assessment, delivered earlier and enforced more consistently, so weaknesses surface long before the examination hall.</p>
+
+  <div class="plan-card">
+    <span class="plan-tag">A1 &middot; Targeted &amp; Intensified Academic Support</span>
+    <h4>Sharper Focus, Backed by a Dedicated English Language Appointment</h4>
+    <ul>
+      <li><p>We have directed that academic support for the incoming SS3 set be more targeted and intensified than in previous years, with subject teachers tracking each student's specific weak areas — particularly English Language, Mathematics, Government, and Chemistry — throughout the year rather than only at the point of examination.</p></li>
+      <li><p>On English Language specifically, we are bringing in a dedicated member of staff whose sole responsibility will be the English Language of the SS3 class and Oral English at Year 9 — a targeted appointment, not a shared duty.</p></li>
+    </ul>
+  </div>
+
+  <div class="plan-card">
+    <span class="plan-tag">A2 &middot; Structured Mock Examinations</span>
+    <h4>A Fixed, Non-Negotiable Mock Calendar Under Real WAEC Conditions</h4>
+    <p>We are formalising our mock examination programme into a fixed calendar: weekly or fortnightly tests, topic-based tests, and full WAEC-style mock examinations, run under genuine examination conditions — real timing, formal invigilation, standard WAEC instructions, and marking to WAEC schemes. We will review the results of every mock series before they are used to redirect support.</p>
+  </div>
+
+  <div class="plan-card">
+    <span class="plan-tag">A3 &middot; Continuous Assessment &amp; Diagnostic Testing</span>
+    <h4>Serious Assessment Beginning at Year 9, Not SS3</h4>
+    <p>Assessment already happens at Taqwa; what we are changing is when it starts and what it is for. We are extending structured monthly and end-of-term examinations, and timed exercises, down into Year 9 rather than leaving serious testing to SS3. Every one of these assessments is to be built to diagnose specific weaknesses in each student, not simply produce a score — that distinction is the entire point of the exercise, and we expect it reflected in how teachers set and mark them.</p>
+  </div>
+
+  <div class="plan-card">
+    <span class="plan-tag">A4 &middot; Practical Training &amp; Subject Workshops</span>
+    <h4>Fixed, Examined Practical Work and Targeted Workshops</h4>
+    <p>Our science students already undertake practical work; we are tightening this so that laboratory practice and proper experiment-recording are a fixed, examined part of the science programme rather than an occasional exercise. We are also instituting dedicated English Language and Mathematics workshops, run alongside normal lessons, targeting the specific and recurring mistakes this year's own results show our students are making — and we are requiring every subject teacher to walk students through WAEC's marking schemes directly, so they understand exactly how marks are awarded.</p>
+  </div>
+</section>
+
+<div class="divider"><div class="line"></div><svg width="20" height="20" viewBox="0 0 20 20"><path d="M10 0 L12.5 7.5 L20 10 L12.5 12.5 L10 20 L7.5 12.5 L0 10 L7.5 7.5 Z" fill="#c9a227"/></svg><div class="line"></div></div>
+
+<section id="groupB" class="reveal">
+  <span class="tag">Group B</span>
+  <h2 class="section-title">Exam-Readiness Skills</h2>
+  <p class="section-sub">Beyond subject knowledge, we are building a deliberate, examined programme around the specific skill of sitting WAEC itself.</p>
+
+  <div class="plan-card">
+    <span class="plan-tag">B1 &middot; Systematic Use of WAEC Past Questions</span>
+    <h4>Past Questions as Scheduled Teaching, Not Supplementary Homework</h4>
+    <p>We are making WAEC past questions — organised by topic and by year, across objective, theory, and practical formats — a core, scheduled part of teaching. We have instructed teachers to explicitly teach how WAEC constructs its questions, not simply to hand students the answers.</p>
+  </div>
+
+  <div class="plan-card">
+    <span class="plan-tag">B2 &middot; Examination Technique Training</span>
+    <h4>A Directly Taught Skill, Not an Assumed One</h4>
+    <p>We are instituting a dedicated strand of training on examination technique itself — time management, correct interpretation of command words such as <i>state, explain, discuss, calculate, compare,</i> and <i>outline</i>, answering precisely what is asked, essay structure, full working in calculations, correct diagram labelling, and checking work before submission. This is a skill we expect every subject teacher to teach directly, not assume students already have.</p>
+  </div>
+
+  <div class="plan-card">
+    <span class="plan-tag">B3 &middot; Intensive SS3 Revision Programme</span>
+    <h4>A Strengthened Structure for the Run-In to WAEC</h4>
+    <p>As in previous years, SS3 will run an intensive revision programme; we are strengthening its structure this year to include topic-by-topic revision, subject clinics, after-hours revision classes, weekend and holiday lessons, an intensive period immediately before WAEC, and small-group intervention specifically for the students we have identified as weak.</p>
+  </div>
+</section>
+
+<div class="divider"><div class="line"></div><svg width="20" height="20" viewBox="0 0 20 20"><path d="M10 0 L12.5 7.5 L20 10 L12.5 12.5 L10 20 L7.5 12.5 L0 10 L7.5 7.5 Z" fill="#c9a227"/></svg><div class="line"></div></div>
+
+<section id="groupC" class="reveal">
+  <span class="tag">Group C</span>
+  <h2 class="section-title">Differentiated &amp; Individual Support</h2>
+  <p class="section-sub">Support only works if it reaches the right student in the right form — this is how we are matching effort to need, and tightening the environment students prepare in.</p>
+
+  <div class="plan-card">
+    <span class="plan-tag">C1 &middot; Tiered Intervention by Performance Level</span>
+    <h4>Ending the One-Size-Fits-All Approach</h4>
+    <p>We are ending a one-size-fits-all approach to SS3 teaching. Going forward, high performers will be given extension work and harder WAEC-style questions, average performers will receive consolidation and intensive practice, and weak performers will receive dedicated remedial teaching, a return to foundational concepts, and close monitoring from subject teachers and school leadership directly.</p>
+  </div>
+
+  <div class="plan-card">
+    <span class="plan-tag">C2 &middot; Mandatory Hostel Residency</span>
+    <h4>Every Student Resumes to the Hostel, by Our Instruction</h4>
+    <p>We have directed that every student in the next SS3 set resume to the hostel for the full academic year. This is a direct response to conduct concerns identified in this year's results, and it removes the option to informally leave school during term — the environment students prepare in will be consistent and supervised, by our instruction.</p>
+  </div>
+
+  <div class="plan-card">
+    <span class="plan-tag">C3 &middot; Guarded Supervision &amp; Study Discipline</span>
+    <h4>Stricter Supervision, Applied Consistently</h4>
+    <p>Hostel supervision under our direction will be stricter and more closely guarded than in previous years, with structured study periods and defined study strategies applied consistently across the SS3 set, so that every student is guided toward disciplined, purposeful preparation.</p>
+  </div>
+</section>
+
+<div class="divider"><div class="line"></div><svg width="20" height="20" viewBox="0 0 20 20"><path d="M10 0 L12.5 7.5 L20 10 L12.5 12.5 L10 20 L7.5 12.5 L0 10 L7.5 7.5 Z" fill="#c9a227"/></svg><div class="line"></div></div>
+
+<section id="groupD" class="reveal">
+  <span class="tag">Group D</span>
+  <h2 class="section-title">Stakeholders, Conduct &amp; Integrity</h2>
+  <p class="section-sub">None of the above works without parents, the PTA, and the students themselves fully engaged — we are formalising each of their roles in this plan.</p>
+
+  <div class="plan-card">
+    <span class="plan-tag">D1 &middot; Parent &amp; PTA Engagement</span>
+    <h4>Closer, More Frequent Engagement — With Real Consequences</h4>
+    <p>We will open the academic year with a meeting for parents to walk through this plan and the school's policy on the examination. From that point, parents will receive academic progress reports, mock examination results, and specific intervention recommendations for their ward, and we will convene direct meetings with the parents of any student flagged as struggling. Where a student does not adhere to this plan, or does not meet an agreed minimum threshold, we reserve the right to de-register that student from the examination — a step we will communicate to parents in advance, not after the fact.</p>
+    <p>We have also asked the PTA Executives to move beyond their previous once-a-year address to students. Under this plan, they will speak to students four times across the year: at the start of the first term, at the midpoint of the first term, at the start of the second term, and again at the commencement of the WAEC examinations.</p>
+  </div>
+
+  <div class="plan-card">
+    <span class="plan-tag">D2 &middot; Resumption Briefing &amp; Examination Integrity</span>
+    <h4>Our Address to the Class, and a Zero-Tolerance Line on Malpractice</h4>
+    <p>We will address the SS3 class at resumption — not as a warning, but as a direct, motivational conversation about the seriousness of the year ahead and our own commitment to seeing them through it. We are maintaining a strict, zero-tolerance position on examination malpractice: any student found engaging in it, directly or by association, will be handed over to WAEC without exception, and we will discuss this policy in full with parents at the opening meeting.</p>
+  </div>
+</section>
+
+<div class="divider"><div class="line"></div><svg width="20" height="20" viewBox="0 0 20 20"><path d="M10 0 L12.5 7.5 L20 10 L12.5 12.5 L10 20 L7.5 12.5 L0 10 L7.5 7.5 Z" fill="#c9a227"/></svg><div class="line"></div></div>
+
+<section id="timeline" class="reveal" style="padding-top:0;">
+  <div class="timeline">
+    <div class="timeline-inner">
+      <h3>The Year at a Glance — PTA &amp; Parent Touchpoints</h3>
+      <div class="tl-grid">
+        <div class="tl-item"><div class="n">Resumption</div><p>Strategic-plan meeting with parents; Management briefing to SS3 class on the year ahead.</p></div>
+        <div class="tl-item"><div class="n">Term 1, Start</div><p>First PTA Executive address to students.</p></div>
+        <div class="tl-item"><div class="n">Term 1, Mid-Point</div><p>Second PTA Executive address, start of second half of the term.</p></div>
+        <div class="tl-item"><div class="n">Term 2, Start</div><p>Third PTA Executive address to students.</p></div>
+        <div class="tl-item"><div class="n">Ongoing</div><p>Monthly exams, mock series, progress reports and intervention recommendations sent to parents throughout.</p></div>
+        <div class="tl-item"><div class="n">Pre-WAEC</div><p>Intensive revision period, subject clinics, and small-group intervention for weak performers.</p></div>
+        <div class="tl-item"><div class="n">WAEC Commencement</div><p>Fourth and final PTA Executive address to students, at the start of the examinations.</p></div>
+        <div class="tl-item"><div class="n">Throughout</div><p>Hostel residency and guarded supervision in effect for the full SS3 academic year.</p></div>
+      </div>
+    </div>
+  </div>
+  <div class="sign-block">
+    <div class="role">Submitted for the Board's record.</div>
+    <div class="school">Office of the Principal &middot; Taqwa High School, Off Iju Road, Agege, Lagos</div>
+	</div>
+</section>
+
+<a href="index.html"><button class="wfp-button">Back to Results Analysis</button></a>
+	<style>
+    .wfp-button {
+        background-color: #001f3f;
+        color: white;
+        font-size: 22px;
+        font-weight: bold;
+        padding: 18px 40px;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+    }
+    .wfp-button:hover {
+        background-color: #003366;
+    }
+	</style>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div><div class="brand">Taqwa High School</div><div>Grooming for Life</div></div>
+    <div>The Way Forward &middot; Response to the 2026 WASSCE Comprehensive Result &amp; Pass-Rate Report &middot; Off Iju Road, Agege, Lagos</div>
+  </div>
+</footer>
+
+<script>
+const io = new IntersectionObserver((entries)=>{
+  entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+},{threshold:0.08});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>

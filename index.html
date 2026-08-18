@@ -1,0 +1,839 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Taqwa High School — 2026 WASSCE Comprehensive Result Analysis &amp; Pass-Rate Report</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,600&family=Lora:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy-950:#081527;
+  --navy-900:#0b1e36;
+  --navy-800:#12304f;
+  --navy-700:#1a4066;
+  --gold-600:#a9821c;
+  --gold-500:#c9a227;
+  --gold-400:#dab949;
+  --gold-300:#e8c766;
+  --parchment:#f6f1e3;
+  --parchment-dim:#eee6d1;
+  --ink:#1b2431;
+  --ink-soft:#4a5568;
+  --green:#2f6f52;
+  --green-dim:#e4f0e9;
+  --slate:#3d5a80;
+  --slate-dim:#e3eaf3;
+  --amber:#b9752b;
+  --red:#a23b2e;
+  --red-dim:#f7e6e3;
+  --card:#ffffff;
+  --grade-a:#2f8f5b;
+  --grade-b:#1e63b3;
+  --grade-c:#0b1e36;
+  --grade-d:#9a4fa3;
+  --grade-e:#dd7a1f;
+  --grade-f:#a23b2e;
+}
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{margin:0;background:var(--parchment);color:var(--ink);font-family:'Lora',serif;line-height:1.55;}
+.display{font-family:'Playfair Display',serif;}
+.mono{font-family:'IBM Plex Mono',monospace;}
+
+.divider{display:flex; align-items:center; gap:14px; margin:0 0 34px 0;}
+.divider .line{flex:1; height:1px; background:linear-gradient(90deg, transparent, var(--gold-500), transparent);}
+.divider svg{flex-shrink:0;}
+
+header.hero{
+  position:relative; background:radial-gradient(ellipse at 20% -10%, #163a5f 0%, var(--navy-900) 55%, var(--navy-950) 100%);
+  color:var(--parchment); padding:64px 8vw 54px; overflow:hidden; isolation:isolate;
+}
+header.hero::before{
+  content:""; position:absolute; inset:0;
+  background-image:repeating-linear-gradient(45deg, rgba(201,162,39,0.055) 0 2px, transparent 2px 46px),
+    repeating-linear-gradient(-45deg, rgba(201,162,39,0.055) 0 2px, transparent 2px 46px);
+  z-index:-1;
+}
+header.hero::after{
+  content:""; position:absolute; right:-140px; top:-140px; width:420px; height:420px; border-radius:50%;
+  background:radial-gradient(circle, rgba(201,162,39,0.16), transparent 70%); z-index:-1;
+}
+.eyebrow{font-family:'IBM Plex Mono',monospace; letter-spacing:.22em; text-transform:uppercase; font-size:12px; color:var(--gold-300); display:flex; align-items:center; gap:10px;}
+.eyebrow::before{content:"◆"; color:var(--gold-500); font-size:10px;}
+h1.title{font-size:clamp(30px,4.6vw,52px); margin:14px 0 6px; font-weight:800; letter-spacing:-.01em; max-width:22ch;}
+h1.title .accent{color:var(--gold-400); font-style:italic; font-weight:600;}
+.subtitle{font-size:17px; color:#c9d3e0; max-width:66ch; margin:0 0 30px;}
+.hero-meta{display:flex; flex-wrap:wrap; gap:28px 46px; margin-top:36px; padding-top:26px; border-top:1px solid rgba(232,199,102,0.25);}
+.hero-meta .item .k{font-family:'IBM Plex Mono',monospace; font-size:10.5px; letter-spacing:.14em; text-transform:uppercase; color:#8fa3bc;}
+.hero-meta .item .v{font-family:'Playfair Display',serif; font-size:19px; font-weight:600; color:var(--parchment); margin-top:3px;}
+
+.quicknav{position:sticky; top:0; z-index:20; background:rgba(11,30,54,0.97); backdrop-filter:blur(6px); border-bottom:1px solid rgba(232,199,102,0.3); overflow-x:auto; white-space:nowrap;}
+.quicknav .inner{display:flex; gap:4px; padding:10px 8vw; max-width:1180px; margin:0 auto;}
+.quicknav a{flex-shrink:0; font-family:'IBM Plex Mono',monospace; font-size:11.5px; letter-spacing:.04em; color:#b9c6d8; text-decoration:none; padding:7px 13px; border-radius:20px; transition:background .15s, color .15s;}
+.quicknav a:hover{background:rgba(201,162,39,0.18); color:var(--gold-300);}
+
+main{max-width:1180px; margin:0 auto; padding:0 8vw;}
+section{padding:52px 0; scroll-margin-top:60px;}
+h2.section-title{font-size:clamp(22px,2.8vw,30px); font-weight:700; margin:0 0 6px; color:var(--navy-900);}
+p.section-sub{color:var(--ink-soft); margin:0 0 26px; max-width:70ch; font-size:15.5px;}
+.tag{display:inline-block; font-family:'IBM Plex Mono',monospace; font-size:10.5px; letter-spacing:.16em; text-transform:uppercase; color:var(--gold-600); background:rgba(201,162,39,0.12); padding:4px 10px; border-radius:3px; margin-bottom:12px;}
+
+.tldr{background:linear-gradient(160deg, var(--navy-900), var(--navy-800)); border:1px solid var(--gold-600); border-radius:14px; color:var(--parchment); padding:28px 30px; margin:-30px 0 0; position:relative; z-index:2; box-shadow:0 20px 44px -20px rgba(8,21,39,0.5);}
+.tldr .tldr-label{font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:.2em; text-transform:uppercase; color:var(--gold-300); margin-bottom:14px;}
+.tldr-grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(140px,1fr)); gap:18px 22px;}
+.tldr-item .n{font-family:'Playfair Display',serif; font-size:28px; font-weight:800; color:var(--parchment); line-height:1;}
+.tldr-item .l{font-family:'IBM Plex Mono',monospace; font-size:10.5px; color:#9fb0c6; text-transform:uppercase; letter-spacing:.05em; margin-top:5px;}
+.tldr-verdict{margin-top:20px; padding-top:18px; border-top:1px dashed rgba(232,199,102,0.3); display:flex; align-items:center; gap:14px; flex-wrap:wrap;}
+.tldr-verdict .vb{font-family:'Playfair Display',serif; font-weight:800; font-size:20px; letter-spacing:.02em; background:var(--gold-500); color:var(--navy-950); padding:6px 18px; border-radius:20px;}
+.tldr-verdict .vt{font-size:14px; color:#c9d3e0; max-width:56ch;}
+
+.stat-grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(160px,1fr)); gap:16px;}
+.stat-card{background:var(--card); border:1px solid #e6ddc4; border-radius:10px; padding:22px 20px; position:relative; overflow:hidden;}
+.stat-card::before{content:""; position:absolute; left:0; top:0; bottom:0; width:4px; background:var(--gold-500);}
+.stat-card .num{font-family:'Playfair Display',serif; font-size:36px; font-weight:800; color:var(--navy-900); line-height:1;}
+.stat-card .lbl{margin-top:8px; font-size:12.5px; color:var(--ink-soft); text-transform:uppercase; letter-spacing:.06em; font-family:'IBM Plex Mono',monospace;}
+.stat-card .sub{margin-top:4px; font-size:12.5px; color:var(--gold-600);}
+.stat-card.good::before{background:var(--green);}
+.stat-card.warn::before{background:var(--red);}
+
+.grid-2{display:grid; grid-template-columns:1.3fr 1fr; gap:36px;}
+@media(max-width:860px){.grid-2{grid-template-columns:1fr;}}
+.grid-2b{display:grid; grid-template-columns:1fr 1fr; gap:36px;}
+@media(max-width:860px){.grid-2b{grid-template-columns:1fr;}}
+.grid-3{display:grid; grid-template-columns:1fr 1fr 1fr; gap:16px;}
+@media(max-width:860px){.grid-3{grid-template-columns:1fr;}}
+
+.subject-row{margin-bottom:20px;}
+.subject-row .toprow{display:flex; align-items:baseline; justify-content:space-between; margin-bottom:6px;}
+.subject-row .name{font-size:14.5px; font-weight:600; color:var(--navy-900);}
+.subject-row .name .full{font-size:10.5px; color:var(--ink-soft); font-weight:400; font-family:'IBM Plex Mono',monospace; margin-left:6px;}
+.subject-row .pct{font-family:'IBM Plex Mono',monospace; font-size:14px; font-weight:700; color:var(--navy-900);}
+.subject-row .pct span{font-size:10px; color:var(--ink-soft); font-weight:400; text-transform:uppercase; margin-left:3px;}
+.segbar{display:flex; height:22px; border-radius:20px; overflow:hidden; background:var(--parchment-dim); border:1px solid #e6ddc4;}
+.segbar .seg{height:100%;}
+.segbar .seg.dist{background:var(--gold-500);}
+.segbar .seg.credit{background:var(--slate);}
+.segbar .seg.rest{background:transparent;}
+.subject-row .breakdown{font-family:'IBM Plex Mono',monospace; font-size:10.5px; color:var(--ink-soft); margin-top:5px;}
+.subject-row .breakdown b{color:var(--navy-900);}
+.legend-mini{display:flex; gap:18px; flex-wrap:wrap; font-family:'IBM Plex Mono',monospace; font-size:11px; color:var(--ink-soft); margin:6px 0 22px;}
+.legend-mini .sw{width:10px; height:10px; border-radius:2px; display:inline-block; margin-right:5px; vertical-align:-1px;}
+
+.donut-wrap{display:flex; align-items:center; gap:26px; flex-wrap:wrap; justify-content:center;}
+.legend{display:flex; flex-direction:column; gap:9px;}
+.legend .row{display:flex; align-items:center; gap:9px; font-size:13.5px;}
+.legend .sw{width:12px; height:12px; border-radius:3px; flex-shrink:0;}
+.legend .row b{font-family:'IBM Plex Mono',monospace; margin-left:auto; padding-left:14px;}
+
+.gatekeeper-card{background:linear-gradient(160deg,#fff,#fbf7ec); border:1px solid var(--gold-500); border-radius:12px; padding:22px 24px; position:relative;}
+.gatekeeper-card.crit{border-color:var(--red); background:linear-gradient(160deg,#fff,#fbeeec);}
+.gatekeeper-card h3{font-family:'Playfair Display',serif; font-size:18px; margin:0 0 4px; color:var(--navy-900);}
+.gk-pct{font-family:'Playfair Display',serif; font-size:44px; font-weight:800; color:var(--gold-600); line-height:1; margin:10px 0 4px;}
+.gatekeeper-card.crit .gk-pct{color:var(--red);}
+.gk-sub{font-size:12.5px; color:var(--ink-soft); font-family:'IBM Plex Mono',monospace;}
+.gk-track{background:var(--parchment-dim); border-radius:20px; height:12px; margin-top:14px; overflow:hidden;}
+.gk-fill{height:100%; border-radius:20px; background:linear-gradient(90deg,var(--navy-700),var(--gold-500));}
+.gatekeeper-card.crit .gk-fill{background:linear-gradient(90deg,var(--navy-700),var(--red));}
+
+.podium{display:grid; grid-template-columns:1fr 1fr 1fr; gap:16px; align-items:end; margin-bottom:28px;}
+.podium-card{background:linear-gradient(160deg, var(--navy-900), var(--navy-800)); border-radius:12px; padding:26px 18px 22px; text-align:center; color:var(--parchment); position:relative; border:1px solid var(--gold-600);}
+.podium-card.first{padding-top:34px; box-shadow:0 14px 34px -12px rgba(201,162,39,0.45);}
+.rank-badge{width:38px; height:38px; border-radius:50%; margin:0 auto 12px; display:flex; align-items:center; justify-content:center; font-family:'Playfair Display',serif; font-weight:800; font-size:17px; background:var(--gold-500); color:var(--navy-950);}
+.podium-card.first .rank-badge{width:46px; height:46px; font-size:20px; background:linear-gradient(135deg,var(--gold-300),var(--gold-600));}
+.podium-card .pname{font-family:'Playfair Display',serif; font-weight:700; font-size:15px; margin-bottom:4px; min-height:38px;}
+.podium-card .pavg{font-family:'IBM Plex Mono',monospace; font-size:20px; color:var(--gold-300); font-weight:600;}
+.podium-card .pmeta{font-size:11px; color:#9fb0c6; margin-top:6px; font-family:'IBM Plex Mono',monospace;}
+
+.mention-list{background:var(--card); border:1px solid #e6ddc4; border-radius:10px; padding:6px 0;}
+.mention-row{display:flex; align-items:center; gap:14px; padding:11px 20px; border-bottom:1px solid #f0e9d5; font-size:14px;}
+.mention-row:last-child{border-bottom:none;}
+.mention-row .rk{width:22px; font-family:'IBM Plex Mono',monospace; color:var(--gold-600); font-weight:700;}
+.mention-row .nm{flex:1; font-weight:600; color:var(--navy-900);}
+.mention-row .dp{font-family:'IBM Plex Mono',monospace; font-size:10.5px; color:var(--ink-soft); margin-right:8px;}
+.mention-row .badges{display:flex; gap:5px;}
+.mention-row .av{font-family:'IBM Plex Mono',monospace; color:var(--ink-soft); font-size:13px;}
+
+.dept-card{background:var(--card); border:1px solid #e6ddc4; border-radius:10px; padding:20px 22px; border-top:3px solid var(--slate);}
+.dept-card h3{font-family:'Playfair Display',serif; font-size:17px; margin:0 0 12px; color:var(--navy-900);}
+.dept-row{display:flex; justify-content:space-between; font-size:13px; padding:6px 0; border-bottom:1px dashed #ede4c8;}
+.dept-row:last-child{border-bottom:none;}
+.dept-row .l{color:var(--ink-soft);}
+.dept-row .v{font-family:'IBM Plex Mono',monospace; font-weight:600; color:var(--navy-900);}
+
+.card-grid{display:grid; grid-template-columns:repeat(auto-fill,minmax(300px,1fr)); gap:16px;}
+.candidate{background:var(--card); border:1px solid #e6ddc4; border-radius:10px; padding:18px 18px 16px; transition:transform .15s ease, box-shadow .15s ease;}
+.candidate:hover{transform:translateY(-3px); box-shadow:0 12px 26px -14px rgba(11,30,54,0.35);}
+.candidate .top{display:flex; justify-content:space-between; align-items:flex-start; gap:8px; margin-bottom:10px;}
+.candidate .name{font-family:'Playfair Display',serif; font-weight:700; font-size:15.5px; color:var(--navy-900); line-height:1.25;}
+.candidate .reg{font-family:'IBM Plex Mono',monospace; font-size:10.5px; color:var(--ink-soft); margin-top:3px;}
+.dept-chip{font-family:'IBM Plex Mono',monospace; font-size:10.5px; padding:3px 8px; border-radius:20px; flex-shrink:0; font-weight:600;}
+.dept-chip.Commercial{background:#f3e6ee; color:#9c3f74;}
+.dept-chip.Science{background:#e3edf7; color:#28588c;}
+.dept-chip.Arts{background:#f7edcf; color:var(--gold-600);}
+.candidate .meta-line{font-size:12px; color:var(--ink-soft); margin-bottom:12px; font-family:'IBM Plex Mono',monospace;}
+.grade-strip{display:flex; flex-wrap:wrap; gap:4px; margin-bottom:12px;}
+.gchip{min-width:46px; height:42px; padding:4px 3px; border-radius:8px; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:2px; font-size:9px; line-height:1; color:#fff; font-family:'IBM Plex Mono',monospace;}
+.gchip .g{font-weight:700; font-size:14px;}
+.gchip .s{font-weight:500; font-size:9px; letter-spacing:.02em; opacity:.92; text-transform:none;}
+.gA1{background:var(--grade-a);}
+.gB2,.gB3{background:var(--grade-b);}
+.gC4,.gC5,.gC6{background:var(--grade-c);}
+.gD7{background:var(--grade-d);}
+.gE8{background:var(--grade-e);}
+.gF9{background:var(--grade-f);}
+.candidate .foot{display:flex; justify-content:space-between; align-items:center; border-top:1px dashed #e6ddc4; padding-top:10px;}
+.avg-pill{font-family:'IBM Plex Mono',monospace; font-size:12px; color:var(--navy-900); font-weight:700;}
+.flags{display:flex; gap:5px; flex-wrap:wrap;}
+.flag{font-size:9.5px; font-family:'IBM Plex Mono',monospace; padding:2px 7px; border-radius:20px; text-transform:uppercase; letter-spacing:.03em;}
+.flag.good{background:var(--green-dim); color:var(--green);}
+.flag.watch{background:var(--red-dim); color:var(--red);}
+.flag.gold{background:#f7edcf; color:var(--gold-600);}
+.flag.slate{background:var(--slate-dim); color:var(--slate);}
+
+.insight-grid{display:grid; grid-template-columns:repeat(2,1fr); gap:16px;}
+@media(max-width:760px){.insight-grid{grid-template-columns:1fr;}}
+.insight{background:var(--card); border:1px solid #e6ddc4; border-radius:10px; padding:20px 22px; border-top:3px solid var(--gold-500);}
+.insight h3{margin:0 0 8px; font-family:'Playfair Display',serif; font-size:16px; color:var(--navy-900);}
+.insight p{margin:0; font-size:13.8px; color:var(--ink-soft);}
+.insight .kicker{font-family:'IBM Plex Mono',monospace; font-size:10px; letter-spacing:.14em; text-transform:uppercase; color:var(--gold-600); margin-bottom:6px; display:block;}
+.insight.crit{border-top-color:var(--red);}
+.insight.crit .kicker{color:var(--red);}
+
+/* ---------- imported board-report components ---------- */
+.affirm-box{background:#fbf6e8; border:1.5px solid var(--gold-600); border-radius:12px; padding:26px 28px; margin-bottom:18px;}
+.affirm-box h4{margin:0 0 10px; font-family:'Playfair Display',serif; font-size:17px; color:var(--gold-600);}
+.affirm-box p{font-size:14px; color:var(--ink); margin-bottom:10px;}
+.affirm-box p:last-child{margin-bottom:0;}
+.proof-row{display:flex; gap:14px; padding:12px 0; border-bottom:1px dashed #e2d3a8;}
+.proof-row:last-child{border-bottom:none; padding-bottom:0;}
+.proof-row .pi{width:34px; height:34px; border-radius:50%; background:var(--navy-900); color:var(--gold-300); display:flex; align-items:center; justify-content:center; font-family:'IBM Plex Mono',monospace; font-weight:700; font-size:14px; flex-shrink:0;}
+.proof-row .pt{font-size:13.8px; color:var(--ink);}
+.proof-row .pt b{color:var(--navy-900);}
+
+.concern-item{display:flex; gap:14px; padding:14px 0; border-bottom:1px dashed #e6ddc4;}
+.concern-item:last-child{border-bottom:none;}
+.concern-item .ic{width:30px; height:30px; border-radius:50%; background:var(--red-dim); color:var(--red); display:flex; align-items:center; justify-content:center; font-family:'IBM Plex Mono',monospace; font-weight:700; font-size:12px; flex-shrink:0;}
+.concern-item .txt{font-size:13.8px; color:var(--ink-soft);}
+.concern-item .txt b{color:var(--navy-900);}
+
+.case-box{background:var(--card); border:1px solid #e6ddc4; border-left:4px solid var(--red); border-radius:10px; padding:22px 24px; margin-bottom:18px;}
+.case-box h4{margin:0 0 4px; font-family:'Playfair Display',serif; font-size:16px; color:var(--navy-900);}
+.case-box .reg-tag{font-family:'IBM Plex Mono',monospace; font-size:11px; color:var(--ink-soft); margin-bottom:12px;}
+.case-box p{font-size:14px; margin-bottom:8px; color:var(--ink);}
+.case-box p:last-child{margin-bottom:0;}
+.board-note{background:var(--navy-900); color:var(--parchment); border-radius:10px; padding:20px 24px; margin-top:6px;}
+.board-note .lbl{font-family:'IBM Plex Mono',monospace; font-size:10px; letter-spacing:.14em; text-transform:uppercase; color:var(--gold-300); margin-bottom:8px; display:block;}
+.board-note p{color:#dde4ec; font-size:14px; margin-bottom:0;}
+
+.plan-card{background:var(--card); border:1px solid #e6ddc4; border-radius:10px; padding:20px 22px; margin-bottom:14px; border-top:3px solid var(--green);}
+.plan-card .plan-tag{display:inline-block; font-family:'IBM Plex Mono',monospace; font-size:9.5px; letter-spacing:.1em; text-transform:uppercase; background:var(--green-dim); color:var(--green); padding:3px 9px; border-radius:20px; margin-bottom:10px;}
+.plan-card h4{margin:0 0 8px; font-family:'Playfair Display',serif; font-size:16px; color:var(--navy-900);}
+.plan-card p{font-size:13.8px; margin:0; color:var(--ink-soft);}
+
+.reco-list{background:var(--card); border:1px solid #e6ddc4; border-radius:10px; padding:8px 0;}
+.reco-item{display:flex; gap:14px; padding:14px 22px; border-bottom:1px solid #f0e9d5; align-items:flex-start;}
+.reco-item:last-child{border-bottom:none;}
+.reco-num{font-family:'Playfair Display',serif; font-weight:800; font-size:18px; color:var(--gold-600); flex-shrink:0;}
+.reco-item p{margin:0; font-size:14.5px; color:var(--ink);}
+
+.list-table{width:100%; border-collapse:collapse; background:var(--card); border-radius:10px; overflow:hidden; border:1px solid #e6ddc4; margin:14px 0 26px;}
+.list-table th{background:var(--navy-900); color:var(--parchment); text-align:left; padding:10px 14px; font-family:'IBM Plex Mono',monospace; font-size:10px; text-transform:uppercase; letter-spacing:.07em; font-weight:500;}
+.list-table td{padding:9px 14px; border-bottom:1px solid #f0e9d5; font-size:13.5px;}
+.list-table tr:last-child td{border-bottom:none;}
+.list-table .rk{font-family:'IBM Plex Mono',monospace; font-weight:700; color:var(--gold-600);}
+
+.verdict-banner{background:linear-gradient(135deg, var(--navy-950), var(--navy-800) 60%, #1d4a72); border-radius:16px; padding:44px 8vw; color:var(--parchment); position:relative; overflow:hidden; margin:0 -8vw;}
+.verdict-banner::before{content:""; position:absolute; right:-100px; bottom:-100px; width:340px; height:340px; border-radius:50%; background:radial-gradient(circle, rgba(201,162,39,0.18), transparent 70%);}
+.verdict-inner{max-width:1180px; margin:0 auto; position:relative; z-index:1;}
+.verdict-eyebrow{font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:.2em; text-transform:uppercase; color:var(--gold-300); margin-bottom:14px;}
+.verdict-word{font-family:'Playfair Display',serif; font-weight:800; font-size:clamp(38px,5.6vw,58px); line-height:1; color:var(--gold-400); margin-bottom:6px;}
+.verdict-strap{font-size:16px; color:#c9d3e0; max-width:64ch; margin-bottom:26px;}
+.verdict-reasons{display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:14px; margin-top:8px;}
+.vreason{background:rgba(255,255,255,0.06); border:1px solid rgba(232,199,102,0.25); border-radius:10px; padding:16px 18px;}
+.vreason .vt{font-family:'IBM Plex Mono',monospace; font-size:10px; letter-spacing:.1em; text-transform:uppercase; margin-bottom:6px;}
+.vreason.up .vt{color:#8fd4b0;}
+.vreason.down .vt{color:#e39a8a;}
+.vreason p{margin:0; font-size:13.5px; color:#dbe3ee;}
+
+footer{background:var(--navy-950); color:#8fa3bc; padding:40px 8vw; margin-top:40px; font-size:12.5px;}
+footer .wrap{max-width:1180px; margin:0 auto; display:flex; justify-content:space-between; flex-wrap:wrap; gap:16px; align-items:center;}
+footer .brand{color:var(--gold-300); font-family:'Playfair Display',serif; font-size:15px;}
+
+.reveal{opacity:0; transform:translateY(16px); transition:opacity .6s ease, transform .6s ease;}
+.reveal.in{opacity:1; transform:none;}
+
+@media(max-width:640px){
+  .podium{grid-template-columns:1fr;}
+  .grid-2{gap:24px;}
+  .verdict-banner{padding:36px 6vw; margin:0 -6vw;}
+}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="eyebrow">Taqwa High School &nbsp;·&nbsp; Off Iju Road, Agege, Lagos &nbsp;·&nbsp; WASSCE For School Candidates 2026</div>
+  <h1 class="title">2026 WASSCE Comprehensive <span class="accent">Result Analysis &amp; Pass-Rate</span> Report</h1>
+  <p class="subtitle">A complete statistical and individual breakdown of the school's 2026 WASSCE performance across the Commercial, Science and Arts departments — including subject-by-subject pass rates, an English &amp; Mathematics gatekeeper analysis, and a final performance verdict.</p>
+  <div class="hero-meta">
+    <div class="item"><div class="k">Candidates Sat</div><div class="v">16</div></div>
+    <div class="item"><div class="k">Departments</div><div class="v">3</div></div>
+    <div class="item"><div class="k">Credit &amp; Above Rate</div><div class="v">58.5%</div></div>
+    <div class="item"><div class="k">English Credit Rate</div><div class="v">12.5%</div></div>
+    <div class="item"><div class="k">Cohort Grade Average</div><div class="v">3.50 / 8.0</div></div>
+  </div>
+</header>
+
+<nav class="quicknav">
+  <div class="inner">
+    <a href="#glance">At a Glance</a>
+    <a href="#overview">Snapshot</a>
+    <a href="#subjects">Subject Pass Rates</a>
+    <a href="#gatekeeper">English &amp; Maths</a>
+    <a href="#distribution">Grade Spread</a>
+    <a href="#departments">Departments</a>
+    <a href="#top">Best Performed</a>
+    <a href="#directory">Full Directory</a>
+    <a href="#insights">Key Findings</a>
+    <a href="#affirm">Evidence of Teaching</a>
+    <a href="#concerns">Areas of Attention</a>
+    <a href="#advisory">National Context</a>
+    <a href="#plan">Strategic Plan</a>
+    <a href="#reco">Recommendation</a>
+    <a href="#verdict">Final Verdict</a>
+  </div>
+</nav>
+
+<main>
+
+<!-- AT A GLANCE -->
+<section id="glance" class="reveal" style="padding-top:0;">
+  <div class="tldr">
+    <div class="tldr-label">⚡ At a Glance — everything on this page, in one box</div>
+    <div class="tldr-grid">
+      <div class="tldr-item"><div class="n">16</div><div class="l">Candidates across 3 departments</div></div>
+      <div class="tldr-item"><div class="n">58.5%</div><div class="l">Grades = Credit or better</div></div>
+      <div class="tldr-item"><div class="n">3.1%</div><div class="l">Outright fails (F9)</div></div>
+      <div class="tldr-item"><div class="n">12.5% / 37.5%</div><div class="l">English / Maths credit rate</div></div>
+      <div class="tldr-item"><div class="n">12.5%</div><div class="l">Passed BOTH English &amp; Maths</div></div>
+      <div class="tldr-item"><div class="n">62.5%</div><div class="l">Passed NEITHER English nor Maths</div></div>
+    </div>
+    <div class="tldr-verdict">
+      <span class="vb">FAIR</span>
+      <span class="vt">Many individual subjects post strong pass rates and outright failure is rare — but English Language, the single most important subject on the sheet, sits at just a 12.5% credit rate. That one number is enough to hold this cohort back from a "Good" verdict. Full reasoning in Section 10.</span>
+    </div>
+  </div>
+</section>
+
+<!-- OVERVIEW -->
+<section id="overview" class="reveal">
+  <span class="tag">01 &middot; Cohort Snapshot</span>
+  <h2 class="section-title">Who sat, and where</h2>
+  <p class="section-sub">All 16 candidates entered for the 2026 WASSCE from School Number 4251065 sat their papers — no absentees on this sheet.</p>
+  <div class="stat-grid">
+    <div class="stat-card good"><div class="num">16</div><div class="lbl">Candidates Present</div><div class="sub">0 absent</div></div>
+    <div class="stat-card"><div class="num">10</div><div class="lbl">Science Department</div><div class="sub">62.5% of cohort</div></div>
+    <div class="stat-card"><div class="num">3</div><div class="lbl">Commercial Department</div><div class="sub">Commerce / Accounting track</div></div>
+    <div class="stat-card"><div class="num">3</div><div class="lbl">Arts Department</div><div class="sub">Islamic Studies / Yoruba track</div></div>
+    <div class="stat-card good"><div class="num">14</div><div class="lbl">Distinctions (A1)</div><div class="sub">10.8% of all grades</div></div>
+    <div class="stat-card warn"><div class="num">4</div><div class="lbl">Outright Fails (F9)</div><div class="sub">3.1% of all grades</div></div>
+  </div>
+</section>
+
+<div class="divider"><div class="line"></div><svg width="20" height="20" viewBox="0 0 20 20"><path d="M10 0 L12.5 7.5 L20 10 L12.5 12.5 L10 20 L7.5 12.5 L0 10 L7.5 7.5 Z" fill="#c9a227"/></svg><div class="line"></div></div>
+
+<!-- SUBJECT PASS RATES -->
+<section id="subjects" class="reveal">
+  <span class="tag">02 &middot; Subject Pass-Rate Analysis</span>
+  <h2 class="section-title">Percentage pass, subject by subject</h2>
+  <p class="section-sub"><b>Formula:</b> <span class="mono">% Pass = % Distinction (A1) + % Credit (B2–C6 combined)</span>. Only Pass (D7/E8) and Fail (F9) grades fall outside this "success" band. Ranked strongest to weakest — sample sizes vary since departments sit different subjects.</p>
+  <div class="legend-mini">
+    <span><span class="sw" style="background:var(--gold-500);"></span>Distinction (A1)</span>
+    <span><span class="sw" style="background:var(--slate);"></span>Credit band (B2–C6)</span>
+    <span><span class="sw" style="background:var(--parchment-dim);border:1px solid #d8cca4;"></span>Pass / Fail (not counted as success)</span>
+  </div>
+  <div id="subjectBars"></div>
+</section>
+
+<div class="divider"><div class="line"></div><svg width="20" height="20" viewBox="0 0 20 20"><path d="M10 0 L12.5 7.5 L20 10 L12.5 12.5 L10 20 L7.5 12.5 L0 10 L7.5 7.5 Z" fill="#c9a227"/></svg><div class="line"></div></div>
+
+<!-- GATEKEEPER -->
+<section id="gatekeeper" class="reveal">
+  <span class="tag">03 &middot; The Gatekeeper Subjects</span>
+  <h2 class="section-title">English &amp; Mathematics — the two that matter most</h2>
+  <p class="section-sub">No subject combination compensates for failure here — a Credit in English Language and General Mathematics is the baseline requirement for almost every tertiary admission pathway in Nigeria. Here is exactly how the cohort did in both.</p>
+  <div class="grid-2b" style="margin-bottom:26px;">
+    <div class="gatekeeper-card crit">
+      <h3>English Language</h3>
+      <div class="gk-pct">12.5%</div>
+      <div class="gk-sub">Only 2 of 16 candidates achieved Credit or better</div>
+      <div class="gk-track"><div class="gk-fill" style="width:12.5%;"></div></div>
+      <div class="gk-sub" style="margin-top:10px;">0 Distinction &middot; 2 Credit &middot; 14 Pass (D7/E8) &middot; 0 Fail</div>
+    </div>
+    <div class="gatekeeper-card">
+      <h3>General Mathematics</h3>
+      <div class="gk-pct">37.5%</div>
+      <div class="gk-sub">6 of 16 candidates achieved Credit or better</div>
+      <div class="gk-track"><div class="gk-fill" style="width:37.5%;"></div></div>
+      <div class="gk-sub" style="margin-top:10px;">0 Distinction &middot; 6 Credit &middot; 9 Pass &middot; 1 Fail</div>
+    </div>
+  </div>
+  <div class="grid-2">
+    <div>
+      <h3 class="display" style="font-size:18px;color:var(--navy-900);margin-bottom:14px;">Who cleared both, one, or neither</h3>
+      <div class="donut-wrap">
+        <svg id="emDonut" width="200" height="200" viewBox="0 0 200 200"></svg>
+        <div class="legend" id="emLegend"></div>
+      </div>
+    </div>
+    <div>
+      <h3 class="display" style="font-size:18px;color:var(--navy-900);margin-bottom:14px;">Reading this chart</h3>
+      <p style="font-size:14px;color:var(--ink-soft);margin:0 0 12px;"><b style="color:var(--navy-900);">Only 2 candidates (12.5%)</b> passed both English and Mathematics — the two candidates who go on to meet the standard 5-credit university admission benchmark.</p>
+      <p style="font-size:14px;color:var(--ink-soft);margin:0 0 12px;"><b style="color:var(--navy-900);">4 candidates (25%)</b> passed only one of the two — almost always Maths without English.</p>
+      <p style="font-size:14px;color:var(--ink-soft);margin:0;"><b style="color:var(--red);">10 candidates (62.5%)</b> did not achieve Credit in either gatekeeper subject. This is the single most urgent finding in this report — the school's academic priority for the coming session should be built around it.</p>
+    </div>
+  </div>
+</section>
+
+<div class="divider"><div class="line"></div><svg width="20" height="20" viewBox="0 0 20 20"><path d="M10 0 L12.5 7.5 L20 10 L12.5 12.5 L10 20 L7.5 12.5 L0 10 L7.5 7.5 Z" fill="#c9a227"/></svg><div class="line"></div></div>
+
+<!-- GRADE DISTRIBUTION -->
+<section id="distribution" class="reveal">
+  <span class="tag">04 &middot; Overall Spread</span>
+  <h2 class="section-title">Grade distribution</h2>
+  <p class="section-sub" style="margin-bottom:18px;">All 130 subject grades issued across the 16 present candidates.</p>
+  <div class="donut-wrap">
+    <svg id="donut" width="200" height="200" viewBox="0 0 200 200"></svg>
+    <div class="legend" id="donutLegend"></div>
+  </div>
+</section>
+
+<div class="divider"><div class="line"></div><svg width="20" height="20" viewBox="0 0 20 20"><path d="M10 0 L12.5 7.5 L20 10 L12.5 12.5 L10 20 L7.5 12.5 L0 10 L7.5 7.5 Z" fill="#c9a227"/></svg><div class="line"></div></div>
+
+<!-- DEPARTMENTS -->
+<section id="departments" class="reveal">
+  <span class="tag">05 &middot; Department Comparison</span>
+  <h2 class="section-title">How each department performed</h2>
+  <p class="section-sub">Credit rate is the share of all subject-grades in that department that landed at Credit (C6) or better.</p>
+  <div class="grid-3">
+    <div class="dept-card">
+      <h3>Commercial (3)</h3>
+      <div class="dept-row"><span class="l">Credit rate</span><span class="v">70.8%</span></div>
+      <div class="dept-row"><span class="l">Avg points</span><span class="v">4.33 / 8</span></div>
+      <div class="dept-row"><span class="l">English credit</span><span class="v">1 / 3</span></div>
+      <div class="dept-row"><span class="l">Maths credit</span><span class="v">2 / 3</span></div>
+    </div>
+    <div class="dept-card">
+      <h3>Science (10)</h3>
+      <div class="dept-row"><span class="l">Credit rate</span><span class="v">57.3%</span></div>
+      <div class="dept-row"><span class="l">Avg points</span><span class="v">3.42 / 8</span></div>
+      <div class="dept-row"><span class="l">English credit</span><span class="v">1 / 10</span></div>
+      <div class="dept-row"><span class="l">Maths credit</span><span class="v">4 / 10</span></div>
+    </div>
+    <div class="dept-card">
+      <h3>Arts (3)</h3>
+      <div class="dept-row"><span class="l">Credit rate</span><span class="v">50.0%</span></div>
+      <div class="dept-row"><span class="l">Avg points</span><span class="v">2.92 / 8</span></div>
+      <div class="dept-row"><span class="l">English credit</span><span class="v">0 / 3</span></div>
+      <div class="dept-row"><span class="l">Maths credit</span><span class="v">0 / 3</span></div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"><div class="line"></div><svg width="20" height="20" viewBox="0 0 20 20"><path d="M10 0 L12.5 7.5 L20 10 L12.5 12.5 L10 20 L7.5 12.5 L0 10 L7.5 7.5 Z" fill="#c9a227"/></svg><div class="line"></div></div>
+
+<!-- TOP PERFORMERS -->
+<section id="top" class="reveal">
+  <span class="tag">06 &middot; Best Performed</span>
+  <h2 class="section-title">Best-performed students</h2>
+  <p class="section-sub">Two different lenses on the same cohort — overall exam performance, and readiness for university admission specifically.</p>
+
+  <h3 class="display" style="font-size:18px;color:var(--navy-900);margin:0 0 6px;">06A &middot; Overall WASSCE Performance</h3>
+  <p class="section-sub" style="margin-bottom:14px;">Ranked by average grade point across every subject sat.</p>
+  <table class="list-table">
+    <thead><tr><th>Rank</th><th>Reg. No.</th><th>Department</th><th>Avg (/8)</th><th>Credits</th></tr></thead>
+    <tbody id="listA"></tbody>
+  </table>
+
+  <h3 class="display" style="font-size:18px;color:var(--navy-900);margin:0 0 6px;">06B &middot; University-Entry Readiness</h3>
+  <p class="section-sub" style="margin-bottom:14px;">Ranked first by whether a candidate holds Credit in <b>both</b> English Language and General Mathematics — the standard admission benchmark — then by average grade point.</p>
+  <table class="list-table">
+    <thead><tr><th>Rank</th><th>Reg. No.</th><th>Department</th><th>Eng/Mth Credit</th><th>Avg (/8)</th></tr></thead>
+    <tbody id="listB"></tbody>
+  </table>
+</section>
+
+<!-- FULL DIRECTORY -->
+<section id="directory" class="reveal">
+  <span class="tag">07 &middot; Full Result Sheet</span>
+  <h2 class="section-title">Individual candidate breakdown</h2>
+  <p class="section-sub">All 16 candidates with their complete subject-by-subject grade strip, credit count, and English/Maths gatekeeper status.</p>
+  <div class="card-grid" id="cardGrid"></div>
+</section>
+
+<div class="divider"><div class="line"></div><svg width="20" height="20" viewBox="0 0 20 20"><path d="M10 0 L12.5 7.5 L20 10 L12.5 12.5 L10 20 L7.5 12.5 L0 10 L7.5 7.5 Z" fill="#c9a227"/></svg><div class="line"></div></div>
+
+<!-- INSIGHTS -->
+<section id="insights" class="reveal">
+  <span class="tag">08 &middot; Head of School Briefing</span>
+  <h2 class="section-title">Key findings &amp; recommendations</h2>
+  <div class="insight-grid">
+    <div class="insight crit">
+      <span class="kicker">Critical Concern</span>
+      <h3>English Language credit rate is just 12.5%</h3>
+      <p>14 of 16 candidates scored D7 or E8 — an ordinary Pass, not a Credit — in English. This single subject is the biggest structural risk to the cohort's onward progression and should be the school's top remedial priority.</p>
+    </div>
+    <div class="insight">
+      <span class="kicker">Strength</span>
+      <h3>Several subjects post a 100% pass rate</h3>
+      <p>Commerce, Accounting, Digital Technologies, Islamic Studies, Literature in English and Yoruba all returned Credit or better from every candidate who sat them — evidence the teaching is working where English isn't the bottleneck.</p>
+    </div>
+    <div class="insight">
+      <span class="kicker">Standout</span>
+      <h3>Bakre Khalid Olasubomi leads the cohort</h3>
+      <p>8 credits from 8 subjects sat, including two A1 distinctions (Commerce, Accounting) and zero grade below Credit — the cleanest transcript on the entire sheet.</p>
+    </div>
+    <div class="insight">
+      <span class="kicker">Lowest Performance</span>
+      <h3>Candidate 4251065004 has the lowest performance</h3>
+      <p>3 outright fails (Economics, Government, General Mathematics) against only 3 credits from 8 subjects — the lowest-performing transcript in the cohort.</p>
+    </div>
+    <div class="insight">
+      <span class="kicker">Department Gap</span>
+      <h3>Commercial outperforms Science and Arts</h3>
+      <p>Commercial candidates post a 70.8% credit rate against 57.3% (Science) and 50.0% (Arts) — though with only 3 candidates, this is a small sample worth watching rather than a firm conclusion.</p>
+    </div>
+    <div class="insight">
+      <span class="kicker">Science Subject Split</span>
+      <h3>Chemistry and Physics are dragging Science down</h3>
+      <p>Chemistry sits at a 20% credit rate and Physics at 30% across the 10 Science candidates — the two weakest core science subjects, both worth a syllabus and pacing review.</p>
+    </div>
+  </div>
+</section>
+
+<div class="divider"><div class="line"></div><svg width="20" height="20" viewBox="0 0 20 20"><path d="M10 0 L12.5 7.5 L20 10 L12.5 12.5 L10 20 L7.5 12.5 L0 10 L7.5 7.5 Z" fill="#c9a227"/></svg><div class="line"></div></div>
+
+<!-- 09 EVIDENCE OF TEACHING -->
+<section id="affirm" class="reveal">
+  <span class="tag">09 &middot; Institutional Standing</span>
+  <h2 class="section-title">Evidence of teaching &amp; preparation quality</h2>
+  <div class="affirm-box">
+    <h4>The right preparation, teaching, and guidance was in place</h4>
+    <p>The results of this cohort offer direct, evidence-based confirmation that Taqwa High School's teachers and academic structures gave the SS3 class every reasonable preparation for the 2026 WASSCE. The proof lies plainly in the outcomes of the candidates who made full use of what was provided:</p>
+    <div class="proof-row">
+      <div class="pi">1</div>
+      <div class="pt"><b>Commerce and Accounting — 100% credit rate, 4 A1 grades from 6 sittings.</b> Every single candidate who sat these subjects passed at Credit level or above, with two candidates recording A1 in both subjects. This is direct evidence that where a subject was well taught and consistently engaged with, the results followed.</div>
+    </div>
+    <div class="proof-row">
+      <div class="pi">2</div>
+      <div class="pt"><b>Civic Education — 87.5% credit rate across all 16 candidates, with 10 outright A1 grades.</b> This is the strongest cross-departmental result in the entire cohort, taken by every candidate regardless of track, and stands as clear proof of consistently strong teaching delivery in that subject.</div>
+    </div>
+    <div class="proof-row">
+      <div class="pi">3</div>
+      <div class="pt"><b>The cohort's two strongest candidates</b> recorded average grade points of 5.50 and 5.25 out of 8 respectively, each with multiple A1 and B3 grades and zero fails across 8 subjects — a clear demonstration of what was achievable with the preparation provided, for the candidates who applied themselves fully to it.</div>
+    </div>
+    <div class="proof-row">
+      <div class="pi">4</div>
+      <div class="pt"><b>Within the same Arts class, sitting the identical subject combination,</b> one candidate recorded an average of 3.38/8 with an A1 in Civic Education and zero fails — meaningfully ahead of two of her classmates in the same subjects, taught by the same teachers, under the same conditions. This confirms the gap in outcomes traces to individual application rather than the standard of teaching provided.</div>
+    </div>
+    <p>In every case above, the strongest results came from candidates who were consistently engaged, present, and applied in the lead-up to and during the examination — confirming that the school's academic support was both adequate and effective for those who made full use of it.</p>
+  </div>
+</section>
+
+<div class="divider"><div class="line"></div><svg width="20" height="20" viewBox="0 0 20 20"><path d="M10 0 L12.5 7.5 L20 10 L12.5 12.5 L10 20 L7.5 12.5 L0 10 L7.5 7.5 Z" fill="#c9a227"/></svg><div class="line"></div></div>
+
+<!-- 10 CONCERNS -->
+<section id="concerns" class="reveal">
+  <span class="tag">10 &middot; Risk Review</span>
+  <h2 class="section-title">Areas requiring attention</h2>
+  <div class="concern-item">
+    <div class="ic">E8</div>
+    <div class="txt"><b>English Language remains the cohort's weakest subject.</b> Only 2 of 16 candidates achieved a Credit (12.5%), consistent with the difficulty of the WASSCE English paper nationally. The school will continue to strengthen English Language preparation ahead of future sittings.</div>
+  </div>
+  <div class="concern-item">
+    <div class="ic">!</div>
+    <div class="txt"><b>Government and Chemistry also returned low credit rates</b> (16.7% and 20% respectively), warranting continued reinforcement in the Arts and Science departments going forward.</div>
+  </div>
+  <div class="concern-item">
+    <div class="ic">!!</div>
+    <div class="txt"><b>Only two candidates achieved a Credit in both English Language and Mathematics together</b> — the two core subjects required for most tertiary admissions. Four candidates credited only one of the two (almost always Mathematics), and the remaining ten (62.5% of the cohort) hold neither. This is the cohort's single most significant academic concern and is addressed directly in Section 12.</div>
+  </div>
+  <div class="concern-item">
+    <div class="ic">F9</div>
+    <div class="txt"><b>One candidate recorded three outright fails</b> across core subjects, the cohort's lowest overall result (Candidate 4251065004, average 2.25/8). As with all individual academic matters, this is being followed up directly and privately with the candidate's own parent/guardian rather than shared by name in this report.</div>
+  </div>
+
+  <div class="board-note">
+    <span class="lbl">For the Record</span>
+    <p>The school does not consider the concerns raised in this section a reflection of teaching quality, given the strong results achieved by classmates sitting identical subject combinations under identical conditions (see Section 09). Individual academic and conduct matters are being addressed directly and privately with the affected candidates and their parents/guardians — see Section 12.</p>
+  </div>
+</section>
+
+<div class="divider"><div class="line"></div><svg width="20" height="20" viewBox="0 0 20 20"><path d="M10 0 L12.5 7.5 L20 10 L12.5 12.5 L10 20 L7.5 12.5 L0 10 L7.5 7.5 Z" fill="#c9a227"/></svg><div class="line"></div></div>
+
+<!-- 11 NATIONAL CONTEXT -->
+<section id="advisory" class="reveal">
+  <span class="tag">11 &middot; External Context</span>
+  <h2 class="section-title">National context: the 2026 WASSCE picture across Nigeria</h2>
+  <p class="lead" style="font-size:16.5px;color:var(--navy-900);font-weight:500;margin-bottom:14px;">Taqwa's own results do not sit in isolation. WAEC's own published national figures for the 2026 WASSCE for School Candidates show that the two subjects driving this cohort's weakest numbers — English Language and Mathematics — are the same two subjects driving a national shortfall, and that Nigeria's overall university-admission pass rate has been on a documented multi-year decline.</p>
+
+  <div class="stat-grid" style="margin-bottom:22px;">
+    <div class="stat-card"><div class="num">1.95M</div><div class="lbl">Candidates sat nationally (2026)</div></div>
+    <div class="stat-card warn"><div class="num">61.54%</div><div class="lbl">Met the 5-credit incl. Eng &amp; Mth benchmark</div></div>
+    <div class="stat-card warn"><div class="num">38.46%</div><div class="lbl">≈750,212 candidates did not</div></div>
+    <div class="stat-card"><div class="num">86.50%</div><div class="lbl">Met 5 credits, Eng/Mth not required</div></div>
+  </div>
+
+  <h3 class="sub-title" style="font-size:16.5px;font-weight:700;color:var(--navy-900);margin:22px 0 8px;font-family:'Playfair Display',serif;">11.1&nbsp; English &amp; Mathematics are the national bottleneck, not an isolated Taqwa problem</h3>
+  <p>WAEC's own 2026 figures show a 24.96-percentage-point gap between candidates who secured five credits <i>with no subject restriction</i> (86.50%) and those who secured five credits <i>specifically including</i> English Language and Mathematics (61.54%). In plain terms: roughly a quarter of all WASSCE candidates nationally pass enough subjects to look broadly competent, but are still blocked from university admission by English and/or Mathematics alone. This is precisely the pattern seen in this cohort, where the credit rate across all subjects (58.5%) is meaningfully higher than the English credit rate (12.5%) specifically.</p>
+
+  <h3 class="sub-title" style="font-size:16.5px;font-weight:700;color:var(--navy-900);margin:22px 0 8px;font-family:'Playfair Display',serif;">11.2&nbsp; A documented multi-year national decline</h3>
+  <table class="list-table">
+    <thead><tr><th>Year</th><th>Candidates Meeting the Benchmark</th></tr></thead>
+    <tbody>
+      <tr><td>2023</td><td class="mono">79.81%</td></tr>
+      <tr><td>2024</td><td class="mono">72.12%</td></tr>
+      <tr><td>2025 (WAEC-corrected figure)</td><td class="mono">62.96%</td></tr>
+      <tr><td>2026</td><td class="mono">61.54%</td></tr>
+    </tbody>
+  </table>
+  <p>Taken together, the national pass rate against this benchmark has fallen by close to 18 percentage points since 2023 — a genuine, sustained decline over four sittings, not a single-year event. The 2025 figure above is WAEC's own corrected result: WAEC initially announced 38.32% for 2025, then admitted a technical scoring fault in the serialised English Language objective paper and revised the figure upward to 62.96% four days later. That episode is itself a concrete, WAEC-acknowledged instance of an English-paper grading issue producing what looked, briefly, exactly like a "mass failure" headline before correction.</p>
+  <p style="font-size:13px;color:var(--ink-soft);">Note: comparing 2025 directly against 2026, WAEC describes the change as a modest 1.42-percentage-point decline (62.96% → 61.54%). Reports characterising this as a much larger single-year collapse do not match WAEC's published figures and are not relied upon in this report.</p>
+
+  <h3 class="sub-title" style="font-size:16.5px;font-weight:700;color:var(--navy-900);margin:22px 0 8px;font-family:'Playfair Display',serif;">11.3&nbsp; Independently reported mass failure in English &amp; Mathematics</h3>
+  <p>WAEC's release of the 2026 WASSCE for Private Candidates (First Series) — a separate, smaller candidature of 10,480 — was reported under the headline <i>"mass failure in Maths, English."</i> That release recorded a 37.84% credit rate in Core Mathematics and, in a related Private Candidates release, a 55.94% credit rate in English Language — both materially below the credit rates typically seen in the main School Candidates diet. While this is a different candidate pool from Taqwa's own School Candidates cohort, it corroborates that English and Mathematics performance has been a genuine, independently reported national concern in the 2026 examination cycle, not an isolated issue at this school.</p>
+
+  <div class="board-note">
+    <span class="lbl">Reading This Section</span>
+    <p>None of the above is offered as an excuse for this cohort's results, which are addressed directly and specifically in Sections 09 and 10. It is offered as context: the subjects where Taqwa's candidates struggled most are the same subjects where the nation as a whole is struggling, and the scale of that national struggle is real, documented, and ongoing.</p>
+  </div>
+</section>
+
+<div class="divider"><div class="line"></div><svg width="20" height="20" viewBox="0 0 20 20"><path d="M10 0 L12.5 7.5 L20 10 L12.5 12.5 L10 20 L7.5 12.5 L0 10 L7.5 7.5 Z" fill="#c9a227"/></svg><div class="line"></div></div>
+
+<!-- 12 PLAN -->
+<section id="plan" class="reveal">
+  <span class="tag">12 &middot; Strategic Plan</span>
+  <h2 class="section-title">The Way Forward: Click the button below to view the action response and strategic plan for the next session.</h2>
+<a href="wfp.html"><button class="wfp-button">Way Forward Plan</button></a>
+<style>
+    .wfp-button {
+        background-color: #001f3f;
+        color: white;
+        font-size: 22px;
+        font-weight: bold;
+        padding: 18px 40px;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+    }
+    .wfp-button:hover {
+        background-color: #003366;
+    }
+</style>
+
+<!-- 13 RECOMMENDATION -->
+<section id="reco" class="reveal">
+  <span class="tag">13 &middot; Summary Points</span>
+  <h2 class="section-title">Recommendation to the Board</h2>
+  <p class="section-sub">The School respectfully requests that the Board:</p>
+  <div class="reco-list">
+    <div class="reco-item"><div class="reco-num">i</div><p>Note the overall 2026 WASSCE performance outcomes summarised in Sections 01–08 of this report;</p></div>
+    <div class="reco-item"><div class="reco-num">ii</div><p>Note the evidence of adequate and effective teaching and preparation set out in Section 09;</p></div>
+    <div class="reco-item"><div class="reco-num">iii</div><p>Note the individual academic and conduct matters raised in Section 10, the national examination context set out in Section 11; and</p></div>
+    <div class="reco-item"><div class="reco-num">iv</div><p>Endorse the strategic plan set out in Section 12.</p></div>
+  </div>
+</section>
+
+</main>
+
+<!-- FINAL VERDICT -->
+<section style="max-width:1180px;margin:0 auto;padding:0 8vw 60px;">
+  <div class="verdict-banner reveal" id="verdict">
+    <div class="verdict-inner">
+      <div class="verdict-eyebrow">14 &middot; Final Verdict</div>
+      <div class="verdict-word">FAIR RESULT</div>
+      <p class="verdict-strap">Taken as a whole, the 2026 WASSCE performance from Taqwa High School is a <b>fair</b> result — solid in individual subjects, let down decisively by the one subject that determines almost everything downstream.</p>
+      <div class="verdict-reasons">
+        <div class="vreason up">
+          <div class="vt">✓ Working in its favour</div>
+          <p>Outright failure is rare — just <b>4 failing grades out of 130</b> issued (3.1%) — and six subjects returned a <b>100% pass rate</b> across every candidate who sat them.</p>
+        </div>
+        <div class="vreason up">
+          <div class="vt">✓ Working in its favour</div>
+          <p>The Commercial department, led by Bakre Khalid Olasubomi's clean 8/8 credit sheet, shows the school can produce genuinely strong, admission-ready results.</p>
+        </div>
+        <div class="vreason down">
+          <div class="vt">✗ Holding it back</div>
+          <p>English Language credit rate is just <b>12.5%</b> — only 2 of 16 candidates cleared it. Since English is a non-negotiable requirement almost everywhere, this alone caps the cohort's real-world outcomes regardless of strength elsewhere.</p>
+        </div>
+        <div class="vreason down">
+          <div class="vt">✗ Holding it back</div>
+          <p>Only <b>2 of 16 candidates (12.5%)</b> meet the standard 5-credit-including-English-and-Maths university benchmark. <b>62.5%</b> cleared neither gatekeeper subject.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div><div class="brand">Taqwa High School</div><div>Grooming for Life</div></div>
+    <div>Report compiled from School No. 4251065 · WASSCE For School Candidates 2026 · Off Iju Road, Agege, Lagos</div>
+  </div>
+</footer>
+
+<script>
+const students = [{"examno":"4251065008","name":"Fofana Usman Aboubacar","dept":"Commercial","subjects":[["Commerce","A1"],["Accounting","A1"],["Economics","B3"],["Government","D7"],["Civic Education","A1"],["English Language","D7"],["General Mathematics","C5"],["Digital Technologies","B3"]],"deptRank":2,"deptSize":3},{"examno":"4251065006","name":"Badru Abdsamad Ayoyimika","dept":"Science","subjects":[["Civic Education","A1"],["English Language","C5"],["Further Mathematics","D7"],["General Mathematics","C6"],["Biology","B3"],["Chemistry","D7"],["Physics","D7"],["Digital Technologies","B3"]],"deptRank":4,"deptSize":10},{"examno":"4251065013","name":"Olanipekun Abdulroheem Olanrewaju","dept":"Science","subjects":[["Civic Education","A1"],["English Language","E8"],["Further Mathematics","C6"],["General Mathematics","E8"],["Biology","D7"],["Chemistry","D7"],["Physics","D7"],["Digital Technologies","C6"]],"deptRank":9,"deptSize":10},{"examno":"4251065010","name":"Moruf Adam Ayomide","dept":"Science","subjects":[["Civic Education","A1"],["English Language","E8"],["General Mathematics","D7"],["Agriculture","E8"],["Biology","C5"],["Chemistry","C6"],["Physics","D7"],["Digital Technologies","C6"]],"deptRank":7,"deptSize":10},{"examno":"4251065004","name":"Al-Amin Bashir Al-Amin","dept":"Commercial","subjects":[["Commerce","B3"],["Accounting","B3"],["Economics","F9"],["Government","F9"],["Civic Education","D7"],["English Language","E8"],["General Mathematics","F9"],["Digital Technologies","C6"]],"deptRank":3,"deptSize":3},{"examno":"4251065009","name":"Ismail-Balogun Ayshat Oluwatomi","dept":"Science","subjects":[["Economics","E8"],["Civic Education","A1"],["English Language","D7"],["General Mathematics","E8"],["Biology","B3"],["Chemistry","D7"],["Physics","D7"],["Digital Technologies","C6"]],"deptRank":8,"deptSize":10},{"examno":"4251065012","name":"Olaleye Fareedah Yewande","dept":"Science","subjects":[["Civic Education","A1"],["English Language","E8"],["Further Mathematics","C6"],["General Mathematics","C6"],["Biology","C6"],["Chemistry","D7"],["Physics","C6"],["Digital Technologies","B3"]],"deptRank":3,"deptSize":10},{"examno":"4251065011","name":"Mustapha Abdulrazaq Fatima","dept":"Science","subjects":[["Civic Education","A1"],["English Language","E8"],["Further Mathematics","C6"],["General Mathematics","D7"],["Biology","C6"],["Chemistry","D7"],["Physics","D7"],["Technical Drawing","C4"],["Digital Technologies","C5"]],"deptRank":6,"deptSize":10},{"examno":"4251065016","name":"Zubair Hamida Ayodeji","dept":"Arts","subjects":[["Economics","E8"],["Government","E8"],["Islamic Studies","C5"],["Literature in English","C5"],["Civic Education","B3"],["English Language","D7"],["Yoruba","C6"],["General Mathematics","E8"]],"deptRank":2,"deptSize":3},{"examno":"4251065005","name":"Alayo Kafilah Dolapo","dept":"Arts","subjects":[["Economics","D7"],["Government","F9"],["Islamic Studies","C4"],["Literature in English","C6"],["Civic Education","C4"],["English Language","D7"],["Yoruba","C6"],["General Mathematics","E8"]],"deptRank":3,"deptSize":3},{"examno":"4251065007","name":"Bakre Khalid Olasubomi","dept":"Commercial","subjects":[["Commerce","A1"],["Accounting","A1"],["Economics","C6"],["Government","C5"],["Civic Education","B3"],["English Language","C5"],["General Mathematics","C6"],["Digital Technologies","B3"]],"deptRank":1,"deptSize":3},{"examno":"4251065015","name":"Temim Rahmat Kehinde","dept":"Arts","subjects":[["Economics","D7"],["Government","E8"],["Islamic Studies","C4"],["Literature in English","C5"],["Civic Education","A1"],["English Language","D7"],["Yoruba","C6"],["General Mathematics","D7"]],"deptRank":1,"deptSize":3},{"examno":"4251065003","name":"Abdulkareem Sultan Omojisola","dept":"Science","subjects":[["Civic Education","A1"],["English Language","D7"],["Further Mathematics","C4"],["General Mathematics","C6"],["Biology","C5"],["Chemistry","C6"],["Physics","C6"],["Digital Technologies","C5"]],"deptRank":1,"deptSize":10},{"examno":"4251065014","name":"Temim Abdulrahman Taiwo","dept":"Science","subjects":[["Civic Education","A1"],["English Language","D7"],["Further Mathematics","C6"],["General Mathematics","D7"],["Biology","C5"],["Chemistry","D7"],["Physics","C6"],["Technical Drawing","C4"],["Digital Technologies","C4"]],"deptRank":2,"deptSize":10},{"examno":"4251065001","name":"Abdul Kareem Toyibat Ayomide","dept":"Science","subjects":[["Civic Education","B2"],["English Language","E8"],["Further Mathematics","C4"],["General Mathematics","C5"],["Biology","C5"],["Chemistry","D7"],["Physics","E8"],["Digital Technologies","B3"]],"deptRank":5,"deptSize":10},{"examno":"4251065002","name":"Abdulazeez Abdulazeez Adeshina","dept":"Science","subjects":[["Geography","C4"],["Civic Education","D7"],["English Language","D7"],["General Mathematics","D7"],["Biology","C6"],["Chemistry","D7"],["Physics","D7"],["Digital Technologies","C5"]],"deptRank":9,"deptSize":10}];
+const points = {A1:8,B2:7,B3:6,C4:5,C5:4,C6:3,D7:2,E8:1,F9:0};
+const subjAbbr = {
+  'Commerce':'Com','Accounting':'Acct','Economics':'Econ','Government':'Gov',
+  'Civic Education':'Civ','English Language':'Eng','General Mathematics':'Mth',
+  'Further Mathematics':'FMth','Digital Technologies':'DT','Biology':'Bio',
+  'Chemistry':'Chem','Physics':'Phy','Agriculture':'Agric','Technical Drawing':'TD',
+  'Geography':'Geo','Islamic Studies':'Isl','Literature in English':'Lit','Yoruba':'Yor'
+};
+const categoryOf = g => g==='A1' ? 'Distinction' : (['B2','B3','C4','C5','C6'].includes(g) ? 'Credit' : (g==='F9' ? 'Fail' : 'Pass'));
+const isCredit = g => ['A1','B2','B3','C4','C5','C6'].includes(g);
+const isDistinction = g => g==='A1';
+const gradeColorTier = {Distinction:'#2f8f5b', Credit:'#0b1e36', Pass:'#dd7a1f', Fail:'#a23b2e'};
+
+// ---- per-student computed stats ----
+students.forEach(s=>{
+  const grades = s.subjects.map(([n,g])=>g);
+  const pts = grades.map(g=>points[g]);
+  s.avg = pts.reduce((a,b)=>a+b,0)/pts.length;
+  s.n = grades.length;
+  s.credits = grades.filter(isCredit).length;
+  s.distCount = grades.filter(isDistinction).length;
+  s.failCount = grades.filter(g=>g==='F9').length;
+  const engEntry = s.subjects.find(([n])=>n==='English Language');
+  const mthEntry = s.subjects.find(([n])=>n==='General Mathematics');
+  s.engCredit = engEntry ? isCredit(engEntry[1]) : false;
+  s.mthCredit = mthEntry ? isCredit(mthEntry[1]) : false;
+});
+
+// ---- subject-wide pass rate stats (across all departments) ----
+const subjMap = {};
+students.forEach(s=>{
+  s.subjects.forEach(([name,g])=>{
+    subjMap[name] = subjMap[name] || [];
+    subjMap[name].push(g);
+  });
+});
+const subjPct = Object.entries(subjMap).map(([name,list])=>{
+  const n = list.length;
+  const distCount = list.filter(isDistinction).length;
+  const creditOnly = list.filter(g=>isCredit(g) && !isDistinction(g)).length;
+  const pctDist = distCount/n*100;
+  const pctCredit = creditOnly/n*100;
+  return {name, n, pctDist, pctCredit, pctSuccess: pctDist+pctCredit};
+}).sort((a,b)=> b.pctSuccess-a.pctSuccess || b.n-a.n);
+
+document.getElementById('subjectBars').innerHTML = subjPct.map(d=>`
+  <div class="subject-row">
+    <div class="toprow">
+      <div class="name">${d.name}<span class="full">n=${d.n}</span></div>
+      <div class="pct">${d.pctSuccess.toFixed(1)}%<span>pass</span></div>
+    </div>
+    <div class="segbar">
+      <div class="seg dist" style="width:${d.pctDist.toFixed(1)}%"></div>
+      <div class="seg credit" style="width:${d.pctCredit.toFixed(1)}%"></div>
+      <div class="seg rest" style="width:${(100-d.pctSuccess).toFixed(1)}%"></div>
+    </div>
+    <div class="breakdown">Distinction <b>${d.pctDist.toFixed(1)}%</b> &nbsp;+&nbsp; Credit band <b>${d.pctCredit.toFixed(1)}%</b> &nbsp;=&nbsp; <b>${d.pctSuccess.toFixed(1)}%</b> pass</div>
+  </div>
+`).join('');
+
+// ---- grade distribution donut (4 tiers) ----
+const tierOrder = ['Distinction','Credit','Pass','Fail'];
+const tierCounts = {Distinction:0,Credit:0,Pass:0,Fail:0};
+let grandTotal = 0;
+students.forEach(s=>s.subjects.forEach(([n,g])=>{ tierCounts[categoryOf(g)]++; grandTotal++; }));
+
+function drawDonut(svgEl, dataCounts, order, colorMap, dataTotal, centerLabel, centerSub){
+  let cumulative = 0; const r=80, cx=100, cy=100; let paths='';
+  order.forEach(k=>{
+    const val = dataCounts[k];
+    if(!val) return;
+    const frac = val/dataTotal;
+    const startAngle = cumulative*2*Math.PI - Math.PI/2;
+    cumulative += frac;
+    const endAngle = cumulative*2*Math.PI - Math.PI/2;
+    const x1 = cx + r*Math.cos(startAngle), y1 = cy + r*Math.sin(startAngle);
+    const x2 = cx + r*Math.cos(endAngle), y2 = cy + r*Math.sin(endAngle);
+    const largeArc = frac > 0.5 ? 1 : 0;
+    paths += `<path d="M${cx},${cy} L${x1.toFixed(2)},${y1.toFixed(2)} A${r},${r} 0 ${largeArc} 1 ${x2.toFixed(2)},${y2.toFixed(2)} Z" fill="${colorMap[k]}" stroke="#f6f1e3" stroke-width="2"/>`;
+  });
+  svgEl.innerHTML = paths + `<circle cx="${cx}" cy="${cy}" r="46" fill="#f6f1e3"/><text x="${cx}" y="${cy-4}" text-anchor="middle" font-family="Playfair Display" font-weight="800" font-size="24" fill="#0b1e36">${centerLabel}</text><text x="${cx}" y="${cy+16}" text-anchor="middle" font-family="IBM Plex Mono" font-size="9" fill="#4a5568">${centerSub}</text>`;
+}
+drawDonut(document.getElementById('donut'), tierCounts, tierOrder, gradeColorTier, grandTotal, grandTotal, 'GRADES');
+document.getElementById('donutLegend').innerHTML = tierOrder.map(k=>`
+  <div class="row"><div class="sw" style="background:${gradeColorTier[k]}"></div>${k} <b>${tierCounts[k]} · ${(tierCounts[k]/grandTotal*100).toFixed(1)}%</b></div>
+`).join('');
+
+// ---- English & Maths pie ----
+let bothC=0, oneC=0, neitherC=0;
+students.forEach(s=>{
+  if(s.engCredit && s.mthCredit) bothC++;
+  else if(s.engCredit || s.mthCredit) oneC++;
+  else neitherC++;
+});
+const emColors = {Both:'#2f6f52', One:'#b9752b', Neither:'#a23b2e'};
+const emCounts = {Both:bothC, One:oneC, Neither:neitherC};
+const emOrder = ['Both','One','Neither'];
+drawDonut(document.getElementById('emDonut'), emCounts, emOrder, emColors, students.length, students.length, 'CANDIDATES');
+const emLabels = {Both:'Passed both Eng &amp; Maths', One:'Passed only one', Neither:'Passed neither'};
+document.getElementById('emLegend').innerHTML = emOrder.map(k=>`
+  <div class="row"><div class="sw" style="background:${emColors[k]}"></div>${emLabels[k]} <b>${emCounts[k]} · ${(emCounts[k]/students.length*100).toFixed(1)}%</b></div>
+`).join('');
+
+// ---- List A: Overall WASSCE performance (avg descending) ----
+const listA = [...students].sort((a,b)=> b.avg-a.avg || a.examno.localeCompare(b.examno));
+document.getElementById('listA').innerHTML = listA.map((s,i)=>`
+  <tr><td class="rk">${i+1}</td><td class="mono">${s.examno}</td><td>${s.dept}</td><td class="mono">${s.avg.toFixed(2)}</td><td class="mono">${s.credits}/${s.n}</td></tr>
+`).join('');
+
+// ---- List B: University-entry readiness (Eng+Mth credit tier, then avg) ----
+const gateTier = s => (s.engCredit && s.mthCredit) ? 2 : ((s.engCredit || s.mthCredit) ? 1 : 0);
+const listB = [...students].sort((a,b)=> gateTier(b)-gateTier(a) || b.avg-a.avg || a.examno.localeCompare(b.examno));
+const tierLabel = s => (s.engCredit && s.mthCredit) ? 'Both ✓' : (s.engCredit ? 'Eng only' : (s.mthCredit ? 'Mth only' : 'Neither'));
+document.getElementById('listB').innerHTML = listB.map((s,i)=>`
+  <tr><td class="rk">${i+1}</td><td class="mono">${s.examno}</td><td>${s.dept}</td><td class="mono">${tierLabel(s)}</td><td class="mono">${s.avg.toFixed(2)}</td></tr>
+`).join('');
+
+// ---- candidate cards (anonymized — registration number only) ----
+const ranked = [...students].sort((a,b)=> b.credits-a.credits || b.avg-a.avg);
+document.getElementById('cardGrid').innerHTML = ranked.map(s=>{
+  const chips = s.subjects.map(([name,g])=>`
+    <div class="gchip g${g}" title="${name}: ${categoryOf(g)}"><span class="g">${g}</span><span class="s">${subjAbbr[name] || name.slice(0,4)}</span></div>
+  `).join('');
+  const flags = [];
+  if(s.failCount===0) flags.push('<span class="flag good">No Fails</span>');
+  if(s.distCount>0) flags.push(`<span class="flag gold">${s.distCount} A1</span>`);
+  if(s.failCount>0) flags.push(`<span class="flag watch">${s.failCount} Fail${s.failCount>1?'s':''}</span>`);
+  if(s.engCredit && s.mthCredit) flags.push('<span class="flag slate">Eng+Mth ✓</span>');
+  else flags.push('<span class="flag watch">Eng/Mth gap</span>');
+  return `<div class="candidate">
+    <div class="top">
+      <div><div class="name">Candidate ${s.examno}</div><div class="reg">${s.dept} Department</div></div>
+      <div class="dept-chip ${s.dept}">${s.dept}</div>
+    </div>
+    <div class="meta-line">Rank ${s.deptRank} of ${s.deptSize} in dept &nbsp;·&nbsp; ${s.n} subjects sat</div>
+    <div class="grade-strip">${chips}</div>
+    <div class="foot">
+      <div class="avg-pill">${s.credits}/${s.n} CREDITS · AVG ${s.avg.toFixed(2)}</div>
+      <div class="flags">${flags.join('')}</div>
+    </div>
+  </div>`;
+}).join('');
+
+// ---- reveal on scroll ----
+const io = new IntersectionObserver((entries)=>{
+  entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+},{threshold:0.08});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
